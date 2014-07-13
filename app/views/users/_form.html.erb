@@ -1,0 +1,26 @@
+<%=form_for(@user) do |f| %>
+
+<div>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</div>
+
+<div>
+<%= f.label :age %><br>
+<%= f.text_field :age %>
+</div>
+
+<div>
+<%= f.label :description %><br>
+<%= f.text_field :description %>
+</div>
+
+<div>
+<%= f.label :group_id %><br>
+<%= collection_select( :user, :group_id, Group.all, :id, :title) %><br>
+
+<div class="actions">
+    <%= f.submit %>
+</div>
+
+<% end %>

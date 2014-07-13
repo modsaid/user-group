@@ -1,0 +1,8 @@
+mysql> insert into users (id, name,age, description, created_at, updated_at, group_id) values (4, 'another_not_shehio', 13, 'also_not_awesome', NOW(), NOW(), 2);
+mysql> insert into groups(id, title, created_at, updated_at) values (2,'not_shehios_group', NOW(), NOW());
+
+delete all records from a database:
+delete from table_name
+
+drop database:
+drop database database_name
