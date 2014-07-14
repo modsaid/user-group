@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 (1..100).each do |i|
-	User.create(name: i.to_s)
+	User.create(name: Faker::Name.name, age: Faker::Number.number(2), description: Faker::Hacker.adjective, group_id: (i.to_i%2+1))
 end
