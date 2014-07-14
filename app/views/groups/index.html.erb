@@ -14,7 +14,7 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= link_to group.id, group_path %></td>
+        <td><%= link_to group.id, group_path(group) %></td>
         <td><%= group.title %></td>
         <td><%=l group.created_at %></td>
         <td>
