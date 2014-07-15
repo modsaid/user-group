@@ -21,7 +21,8 @@
     <%#= f.label :group_id, :class => 'control-label' %>
     <div class="controls">
       <% #= f.text_field :group_id, :class => 'text_field' %>
-      <%= collection_select(:user, :group_id, Group.all, :id, :title) %>
+      <% #= collection_select(:user, :group_id, Group.all, :id, :title) %>
+	<%=collection_check_boxes(:user, :group_ids, Group.all, :id, :title)%> 
     </div>
   </div>
 

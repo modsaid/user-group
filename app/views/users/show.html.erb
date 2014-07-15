@@ -10,8 +10,10 @@
   <dd><%= @user.age %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @user.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:group_id) %>:</strong></dt>
-  <dd><%= @user.group_id %></dd>
+  <%@user.groups.each do |group|%>
+  <dt><strong><%= model_class.human_attribute_name(:group_title) %>:</strong></dt>
+  <dd><%= group.title %></dd>
+  <%end%>
 </dl>
 
 <div class="form-actions">

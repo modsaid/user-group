@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710134938) do
+ActiveRecord::Schema.define(version: 20140715115229) do
 
   create_table "groups", force: true do |t|
     t.string   "title"
@@ -19,13 +19,19 @@ ActiveRecord::Schema.define(version: 20140710134938) do
     t.datetime "updated_at"
   end
 
+  create_table "groups_users", id: false, force: true do |t|
+    t.integer "group_id"
+    t.integer "user_id"
+  end
+
+  add_index "groups_users", ["group_id", "user_id"], name: "index_groups_users_on_group_id_and_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.integer  "age"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "group_id"
   end
 
 end

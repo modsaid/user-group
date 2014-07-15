@@ -21,7 +21,13 @@
         <td><%= user.name %></td>
         <td><%= user.age %></td>
         <td><%= user.description %></td>
-        <td><%= user.group_id %></td>
+	<td>
+	<ul>
+	<% user.groups.each do |group| %>
+        <li><%= group.title %></li>
+	<% end %>
+	</ul>
+	</td>
         <td><%=l user.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
