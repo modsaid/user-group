@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
-
-
+gem 'capybara' 
+gem 'guard-rspec' 
+gem 'launchy'
+gem 'rspec-rails', '~> 3.0.0'
+gem 'factory_girl_rails'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
