@@ -32,7 +32,7 @@ describe User do
     expect(user.groups).not_to match_array(nil)
   end 
   
-  it "names should be unique" do
+  it "names should be mandatory" do
     user = User.new
     user.name = "shehab"
     expect(user.name).should_not eql?(nil)
