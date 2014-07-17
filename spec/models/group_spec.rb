@@ -13,4 +13,8 @@ describe Group do
     group2.title = "not_shehios_group"
     expect(group1.title).should_not eql?(group2.title)
   end
+  it "has a mandotary name" do
+    group = Group.new
+    expect(group).not_to be_valid
+  end
 end

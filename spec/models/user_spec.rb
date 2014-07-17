@@ -38,5 +38,10 @@ describe User do
     expect(user.name).should_not eql?(nil)
   end
 
+  it "name, and others attributes should be mandatory" do
+    user = User.new
+    expect(user).not_to be_valid
+  end
+
  
 end
